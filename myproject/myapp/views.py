@@ -1,9 +1,10 @@
 from django.shortcuts import render
-
+from .models import Dog
 # Create your views here.
 
 def index(request):
-   return render(request ,'index.html')
+   dogs = Dog.objects.all()
+   return render(request ,'index.html', {'dogs':dogs})
 
 def counter(request):
    text = request.POST['text']
