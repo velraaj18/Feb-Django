@@ -1,1 +1,19 @@
-<h1>Hello {{name}} , your age is {{age}}, you are studying {{Degree}}</h1>
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hello</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <form method='POST' , action="counter"> 
+       <!-- method can be get or post and action is to denote which router it works on-->
+       {% csrf_token %}  <!-- for POST method we have to use csrf token to avoid attacks-->
+      <textarea name='text' rows ='25' cols = '100'></textarea> <br>
+      <input type ='submit' />
+    </form>
+    <script src="" async defer></script>
+  </body>
+</html>
